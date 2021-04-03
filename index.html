@@ -6,16 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <!-- ScrollMagic -->
+    <!-- ScrollMagic
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
 
-    <!-- TweenMax -->
+    TweenMax
     <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script> -->
 
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script src="assets/js/lib/greensock/TweenMax.min.js"></script>
+    <script src="assets/js/lib/greensock/plugins/ScrollToPlugin.min.js"></script>
+    <script src="assets/js/lib/jquery.min.js"></script>
+    <script src="assets/js/lib/modernizr.custom.min.js"></script>
+    <script src="assets/js/lib/iscroll-probe.js"></script>
+    <script src="scrollmagic/minified/ScrollMagic.min.js"></script>
+    <script src="scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+    <script src="scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
+    <script src="assets/js/demo.js"></script>
 
     <style>
         * {
@@ -33,14 +43,50 @@
         .boll {
             width: 50%;
         }
+
+        header {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        nav > ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav > ul > li {
+            margin-right: 30px;
+        }
+
+        nav > ul > li > a {
+            color: #707070;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        nav > ul > li > a:link {
+            color: #707070
+        }
     </style>
 
 </head>
 <body style="background: #C8D2CF;">    
 
+    <header id="header" style="width: 100%; height: 20px; opacity: 0; transform: translateY(-40%); z-index: 30; position: fixed;">
+        <nav>
+            <ul>
+                <li><a href="#home" id="homeBtn">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#skill">SKILL&EDUCATION</a></li>
+                <li><a href="#experience">EXPERIENCE</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <div id="trigger1"></div>
 
-    <section style="display: flex; height: 731px;" id="visual">
+    <section style="display: flex; height: 731px;" id="home">
         <div class="boll" id="left">
             <div style="width: 150px; height: 150px; background: #607D63; border-radius: 50%; margin-left: 1.8%; margin-top: 1.8%;"></div>
             <div style="width: 50px; height: 50px; background: #607D63; border-radius: 50%; margin-left: 37%; margin-top: 2%;"></div>
@@ -69,41 +115,48 @@
             <div style="width: 40px; height: 40px; background: #607D63; border-radius: 50%; margin-left: 85%; margin-top: 3%;"></div>
         </div>
     </section>
-     
-    <section id="home" style="width: 100%; height: 731px">
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="#home">HOME</a></li>
-                    <li><a href="#skill">SKILL&EDUCATION</a></li>
-                    <li><a href="#experience">EXPERIENCE</a></li>
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
-                </ul>
-            </nav>
-        </header>
 
-    </section>
-
-    <section id="skill" style="width: 100%; height: 731px;">
-        <div>
-            <h1>haha</h1>
-        </div>
-    </section>
-
-    <section id="experience" style="width: 100%; height: 731px; display: flex; justify-content: center; align-items: center;">
-        <div style="background: #fff; width: 92%; height: 92%; border-radius: 20px;"></div>
-    </section>
-
-    <section id="about" style="width: 100%; height: 731px;">
-        <div>
-            <h1>haha</h1>
-        </div>
-    </section>
-
-    <section id="contact" style="width: 100%; height: 731px;">
-        <div></div>
-    </section>
+    <div>
+        <section style="position: absolute;">
+            <div id="b1" style="width: 600px; height: 600px; background: #607D63; transform: translate(260%, -300px); opacity: 0; border-radius: 50%;"></div>
+            <div id="b2" style="width: 600px; height: 600px; background: #607D63; transform: translate(-100%, -190px); opacity: 0; border-radius: 50%;"></div>
+            <div id="b3" style="width: 300px; height: 300px; background: #607D63; transform: translate(-100%, 140px); opacity: 0; border-radius: 50%;"></div>
+            <div id="b4" style="width: 250px; height: 250px; background: #607D63; transform: translate(620%, -160px); opacity: 0; border-radius: 50%;"></div>
+            <div id="b5" style="width: 280px; height: 280px; background: #607D63; transform: translate(560%, 280px); opacity: 0; border-radius: 50%;"></div>
+        </section>
+         
+        <section id="about" style="width: 100%; height: 731px">
+            <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+                <h1>About</h1>
+            </div>
+        </section>
+          
+        <section id="skill" style="width: 100%; height: 731px;">
+            <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+                <h1>Skill</h1>
+            </div>
+        </section>
+    
+        <section id="experience" style="width: 100%; height: 731px; display: flex; justify-content: center; align-items: center;">
+            <div style="background: #fff; width: 92%; height: 92%; border-radius: 20px; display: flex; justify-content: center; align-items: center; z-index: 1;">
+                <h1>Experience</h1>
+            </div>
+        </section>
+    
+        <section id="contact" style="width: 100%; height: 731px;">
+            <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+                <h1>Contact</h1>
+            </div>
+        </section>
+    
+        <section style="width: 100%; height: 100px;">
+            <footer style="display: flex; justify-content: center; align-items: center; height: 100%; background:#607D63;">
+                <div>
+                    <h1>Footer</h1>
+                </div>
+            </footer>
+        </section>
+    </div>
 
     <script src="app.js"></script>
 </body>
