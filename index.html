@@ -9,44 +9,49 @@
     <link rel="stylesheet" href="./css/style.css">
 
     <!-- ScrollMagic -->
-    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script> -->
-    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script> -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
 
     <!-- TweenMax -->
-    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script> -->
-    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script> -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
 
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
-    <script src="components/assets/js/lib/greensock/TweenMax.min.js"></script>
-    <script src="components/assets/js/lib/greensock/plugins/ScrollToPlugin.min.js"></script>
-    <script src="components/assets/js/lib/jquery.min.js"></script>
-    <script src="components/assets/js/lib/modernizr.custom.min.js"></script>
-    <script src="components/assets/js/lib/iscroll-probe.js"></script>
-    <script src="components/scrollmagic/minified/ScrollMagic.min.js"></script>
-    <script src="components/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
-    <script src="components/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
-    <script src="components/assets/js/demo.js"></script>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+
+    <!-- ScrollMagic File -->
+    <!-- <script src="components/assets/js/lib/greensock/TweenMax.min.js"></script> -->
+    <!-- <script src="components/assets/js/lib/greensock/plugins/ScrollToPlugin.min.js"></script> -->
+    <!-- <script src="components/assets/js/lib/jquery.min.js"></script> -->
+    <!-- <script src="components/assets/js/lib/modernizr.custom.min.js"></script> -->
+    <!-- <script src="components/assets/js/lib/iscroll-probe.js"></script> -->
+    <!-- <script src="components/scrollmagic/minified/ScrollMagic.min.js"></script> -->
+    <!-- <script src="components/scrollmagic/minified/plugins/animation.gsap.min.js"></script> -->
+    <!-- <script src="components/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script> -->
+    <!-- <script src="components/assets/js/demo.js"></script> -->
 
 </head>
 <body style="background: #C8D2CF;">    
 
-    <header id="header" style="width: 100%; height: 20px; opacity: 0; transform: translateY(-40%); z-index: 30; position: fixed;">
+    <header id="header">
         <nav>
             <ul>
                 <li><a href="#home" id="homeBtn">HOME</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#skill">SKILL&EDUCATION</a></li>
-                <li><a href="#experience">EXPERIENCE</a></li>
-                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="#about" id="aboutBtn">ABOUT</a></li>
+                <li><a href="#skill" id="skillBtn">SKILL&EDUCATION</a></li>
+                <li><a href="#experience" id="experienceBtn">EXPERIENCE</a></li>
+                <li><a href="#contact" id="contactBtn">CONTACT</a></li>
             </ul>
         </nav>
     </header>
 
     <div id="trigger1"></div>
 
-    <section style="display: flex; height: 731px;" id="home">
+    <section id="home">
         <div class="boll" id="left">
             <div style="width: 150px; height: 150px; background: #607D63; border-radius: 50%; margin-left: 1.8%; margin-top: 1.8%;"></div>
             <div style="width: 50px; height: 50px; background: #607D63; border-radius: 50%; margin-left: 37%; margin-top: 2%;"></div>
@@ -76,40 +81,77 @@
         </div>
     </section>
 
-    <div>
-        <section style="position: absolute;">
-            <div id="b1" style="width: 600px; height: 600px; background: #607D63; transform: translate(260%, -300px); opacity: 0; border-radius: 50%;"></div>
-            <div id="b2" style="width: 600px; height: 600px; background: #607D63; transform: translate(-100%, -190px); opacity: 0; border-radius: 50%;"></div>
-            <div id="b3" style="width: 300px; height: 300px; background: #607D63; transform: translate(-100%, 140px); opacity: 0; border-radius: 50%;"></div>
-            <div id="b4" style="width: 250px; height: 250px; background: #607D63; transform: translate(620%, -160px); opacity: 0; border-radius: 50%;"></div>
-            <div id="b5" style="width: 280px; height: 280px; background: #607D63; transform: translate(560%, 280px); opacity: 0; border-radius: 50%;"></div>
-        </section>
-         
-        <section id="about" style="width: 100%; height: 731px">
-            <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-                <h1>About</h1>
+    <section class="background">
+        <div id="b1"></div>
+        <div id="b2"></div>
+        <div id="b3"></div>
+        <div id="b4"></div>
+        <div id="b5"></div>
+    </section>
+     
+    <section id="about" class="scale">
+        <div style="height: 100%;">
+            <div style="padding: 15%; display: flex;">
+                <div style="margin-left: 60px;">
+                    <h1 class="text" style="color: #E9E9E9;">初めまして</h1>
+                    <h1 class="text mt-1" style="color: #607D63;">李慧君</h1>
+                    <h1 class="text mt-1" style="color: #E9E9E9;">と申します。</h1>
+                    <h1 class="text mt-1" style="color: #E9E9E9;">宜しくお願い致します。</h1>
+                </div>
+                <img style="width: 290px; margin-left: 70px;" src="./img/photo.svg" alt="안녕하세요. 저는 이혜군이라고 합니다.">
             </div>
-        </section>
-          
-        <section id="skill" style="width: 100%; height: 731px;">
-            <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-                <h1>Skill</h1>
+            <div style="width: 45%;">
             </div>
-        </section>
-    
-        <section id="experience" style="width: 100%; height: 731px; display: flex; justify-content: center; align-items: center;">
-            <div style="background: #fff; width: 92%; height: 92%; border-radius: 20px; display: flex; justify-content: center; align-items: center; z-index: 1;">
-                <h1>Experience</h1>
+        </div>
+    </section>
+        
+    <section id="skill" class="scale fit-center">
+        <div style="width: 100%; height: 80%; padding: 50px; display: flex;">
+            <div style="width: 40%; height: 100%;">
+                <p style="text-align: center; font-size: 50px;">EDUCATION</p>
+                <div class="fit-center" style="height: 100%;">
+                    <div style="margin: auto; border: 1px solid #607D63; border-radius: 50%; width: 70%; height: 70%;">
+                        <div style="margin-top: 100px;">
+                            <p style="text-align: center; font-size: 50px;">Daegu</p>
+                            <p style="text-align: center; font-size: 50px;">University</p>
+                        </div>
+                        <div class="fit-center" style="margin-top: 50px;">
+                            <p>Major</p>
+                            <div style="background: #fff; width: 1px; height: 30px; margin: 20px;"></div>
+                            <p>Management</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
-    
-        <section id="contact" style="width: 100%; height: 731px;">
-            <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-                <h1>Contact</h1>
+            <div style="width: 1px; height: 100%; background:#607D63;"></div>
+            <div style="width: 60%; height: 100%;">
+                <p style="text-align: center; font-size: 50px;">SKILL</p>
+                <ul>
+                    <li style="margin: 10px;">IT Passport <div style="width: 100%px; background: #cfcaca; border-radius: 10px; margin: 10px;"><div id="itPassport" style="width: 10%; height: 20px; background: #607D63; border-radius: 10px; text-align: center;"></div></div> </li>
+                    <li style="margin: 10px;">Japanese <div style="width: 100%px; background: #cfcaca; border-radius: 10px; margin: 10px;"><div id="japaneses" style="width: 10%; height: 20px; background: #607D63; border-radius: 10px; text-align: center;"></div></div>  </li>
+                    <li style="margin: 10px;">HTML <div style="width: 100%px; background: #cfcaca; border-radius: 10px; margin: 10px;"><div id="html" style="width: 10%; height: 20px; background: #607D63; border-radius: 10px; text-align: center;"></div></div>  </li>
+                    <li style="margin: 10px;">CSS <div style="width: 100%px; background: #cfcaca; border-radius: 10px; margin: 10px;"><div id="css" style="width: 10%; height: 20px; background: #607D63; border-radius: 10px; text-align: center;"></div></div>  </li>
+                    <li style="margin: 10px;">Javascript <div style="width: 100%px; background: #cfcaca; border-radius: 10px; margin: 10px;"><div id="javascript" style="width: 10%; height: 20px; background: #607D63; border-radius: 10px; text-align: center;">70%</div></div>  </li>
+                    <li style="margin: 10px;">PHP <div style="width: 100%px; background: #cfcaca; border-radius: 10px; margin: 10px;"><div id="php" style="width: 10%; height: 20px; background: #607D63; border-radius: 10px; text-align: center;"></div></div>  </li>
+                    <li style="margin: 10px;">SQL <div style="width: 100%px; background: #cfcaca; border-radius: 10px; margin: 10px;"><div id="sql" style="width: 10%; height: 20px; background: #607D63; border-radius: 10px; text-align: center;"></div></div>  </li>
+                </ul>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 
-    <script src="./js/app.js"></script>
+    <section id="experience" class="scale" style="display: flex; justify-content: center; align-items: center;">
+        <div style="background: #fff; width: 92%; height: 92%; border-radius: 20px; display: flex; justify-content: center; align-items: center; z-index: 1;">
+            <h1>Experience</h1>
+        </div>
+    </section>
+
+    <section id="contact" class="scale">
+        <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+            <h1>Contact</h1>
+        </div>
+    </section>
+
+    <script src="./js/ui.js"></script>
+    <script src="./js/controll.js"></script>
 </body>
 </html>

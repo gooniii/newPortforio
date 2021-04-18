@@ -7,7 +7,7 @@ homeBtn.addEventListener('click', function (e) {
 var controller = new ScrollMagic.Controller();
 
 var b1 = TweenMax.to('#b1', 1, {
-        x: '210%',
+        x: '205%',
         alpha: 1,
     }),
     b2 = TweenMax.to('#b2', 1, {
