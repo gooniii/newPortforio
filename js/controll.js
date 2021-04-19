@@ -41,75 +41,117 @@ window.addEventListener('scroll', function () {
     }
 });
 
-$(document).ready(() => {
-    var javascript = document.getElementById('javascript');
-    var html = document.getElementById('html');
-    var css = document.getElementById('css');
-    var php = document.getElementById('php');
-    var sql = document.getElementById('sql');
-    var itPassport = document.getElementById('itPassport');
-    var japaneses = document.getElementById('japaneses');
-    var width = 3;
+$('#itpassportBtn').on('click', () => {
+    let itPassport = document.getElementById('itPassport'),
+        itpassportWidth = 3,
+        itPassportGauge = setInterval(itpassportFrame, 25);
 
-    var itPassportGauge = setInterval(itpassportFrame, 25);
     function itpassportFrame() {
-        if (width >= 100) {
+        if (itpassportWidth >= 100) {
             clearInterval(itPassportGauge);
         } else {
-            width++;
-            itPassport.style.width = width + '%';
-            itPassport.innerHTML = width + '%';
+            itpassportWidth++;
+            itPassport.style.width = itpassportWidth + '%';
+            itPassport.innerHTML = itpassportWidth + '%';
         }
     }
+});
 
-    var japanesesGauge = setInterval(japanesesFrame, 25);
+$('#japanesesBtn').on('click', () => {
+    let japaneses = document.getElementById('japaneses'),
+        japanesesWidth = 3,
+        japanesesGauge = setInterval(japanesesFrame, 25);
+
     function japanesesFrame() {
-        if (width >= 80) {
+        if (japanesesWidth >= 80) {
             clearInterval(japanesesGauge);
         } else {
-            width++;
-            japaneses.style.width = width + '%';
-            japaneses.innerHTML = width + '%';
+            japanesesWidth++;
+            japaneses.style.width = japanesesWidth + '%';
+            japaneses.innerHTML = japanesesWidth + '%';
         }
     }
+});
 
-    var javascriptGauge = setInterval(javascriptFrame, 20);
-    function javascriptFrame() {
-        if (width >= 40) {
-            clearInterval(javascriptGauge);
-        } else {
-            width++;
+$('#htmlBtn').on('click', () => {
+    let html = document.getElementById('html'),
+        htmlWidth = 3,
+        htmlGauge = setInterval(htmlFrame, 25);
 
-            javascript.style.width = width + '%';
-            javascript.innerHTML = width + '%';
-
-            php.style.width = width + '%';
-            php.innerHTML = width + '%';
-
-            sql.style.width = width + '%';
-            sql.innerHTML = width + '%';
-        }
-    }
-
-    var htmlGauge = setInterval(htmlFrame, 25);
     function htmlFrame() {
-        if (width >= 60) {
+        if (htmlWidth >= 50) {
             clearInterval(htmlGauge);
         } else {
-            width++;
-            html.style.width = width + '%';
-            html.innerHTML = width + '%';
+            htmlWidth++;
+            html.style.width = htmlWidth + '%';
+            html.innerHTML = htmlWidth + '%';
         }
     }
+});
 
-    var cssGauge = setInterval(cssFrame, 25);
+$('#cssBtn').on('click', () => {
+    let css = document.getElementById('css'),
+        cssWidth = 3,
+        cssGauge = setInterval(cssFrame, 25);
+
     function cssFrame() {
-        if (width >= 50) {
+        if (cssWidth >= 50) {
             clearInterval(cssGauge);
         } else {
-            width++;
-            css.style.width = width + '%';
-            css.innerHTML = width + '%';
+            cssWidth++;
+            css.style.width = cssWidth + '%';
+            css.innerHTML = cssWidth + '%';
+        }
+    }
+});
+
+$('#javascriptBtn').on('click', () => {
+    let javascript = document.getElementById('javascript'),
+        javascriptWidth = 3,
+        javascriptGauge = setInterval(javascriptFrame, 25);
+
+    function javascriptFrame() {
+        if (javascriptWidth >= 40) {
+            clearInterval(javascriptGauge);
+        } else {
+            javascriptWidth++;
+
+            javascript.style.width = javascriptWidth + '%';
+            javascript.innerHTML = javascriptWidth + '%';
+        }
+    }
+});
+
+$('#phpBtn').on('click', () => {
+    let php = document.getElementById('php'),
+        phpWidth = 3,
+        phpGauge = setInterval(phpFrame, 25);
+
+    function phpFrame() {
+        if (phpWidth >= 40) {
+            clearInterval(phpGauge);
+        } else {
+            phpWidth++;
+
+            php.style.width = phpWidth + '%';
+            php.innerHTML = phpWidth + '%';
+        }
+    }
+});
+
+$('#sqlBtn').on('click', () => {
+    let sql = document.getElementById('sql'),
+        sqlWidth = 3,
+        sqlGauge = setInterval(sqlFrame, 25);
+
+    function sqlFrame() {
+        if (sqlWidth >= 40) {
+            clearInterval(sqlGauge);
+        } else {
+            sqlWidth++;
+
+            sql.style.width = sqlWidth + '%';
+            sql.innerHTML = sqlWidth + '%';
         }
     }
 });

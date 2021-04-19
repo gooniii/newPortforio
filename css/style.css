@@ -75,18 +75,6 @@ nav > ul > li > a:link {
     margin-top: 40px;
 }
 
-.text {
-    font-size: 52px;
-    font-family: 'Kosugi Maru', sans-serif;
-}
-
-.text:hover {
-    opacity: 0;
-}
-
-.afterText {
-    font-size: 52px;
-}
 
 /* background */
 .background {
@@ -141,8 +129,42 @@ nav > ul > li > a:link {
     opacity: 0; 
     border-radius: 50%;
 }
+
 /* background End */
 
+.text {
+    font-size: 52px;
+    font-family: 'Kosugi Maru', sans-serif;
+}
+
+.text:hover {
+    opacity: 0;
+}
+
+.afterText {
+    font-size: 52px;
+}
+
+.progress-bar {
+    position: relative;
+    height: 20px; 
+    width: 3%;
+    background: #8ea390; 
+    border-radius: 10px; 
+    text-align: center;
+}
+
+.progress-bar::after {
+    width: 27px;
+    height: 27px;
+    background: #607D63;
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    top: -3px;
+    right: 0;
+}
 
 
 

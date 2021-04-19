@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        ul {
+            list-style: none;
+            width: 150px;
+            padding: 0;
+            position: relative;
+        }
+
+        li {
+            background: #afafaf;
+            height: 20px;
+            border-radius: 10px;
+        }
+        
+        .bar {
+            position: absolute;
+            border-radius: 10px;
+            background-color: #5d5d5d;
+            height: 20px;
+        }
+
+        .bar::after {
+            box-sizing: border-box;
+            content: "";
+            width: 27px;
+            height: 27px;
+            position: absolute;
+            top: -3px;
+            right: 0;
+            border-radius: 50%;
+            background-color: #607d8b;
+        }
+
+        .css-progressbar {
+            animation: progressbar 1s ease-out;
+        }
+
+        @keyframes progressbar {
+            0% {
+                width: 0%;
+            }
+            100% {
+                width: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div style="margin-top: 1400px; margin-bottom: 300px;">
+        <h2>HTML</h2>
+        <ul>
+            <li>
+                <span id="progressbar"> </span>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+
+        window.addEventListener('scroll',() => {
+
+            var progressbar = document.getElementById('progressbar');
+
+            if(scrollY >= 764) {
+                progressbar.setAttribute('class', 'css-progressbar bar');
+                progressbar.setAttribute('style', 'width : 50%');
+            } else {
+                progressbar.removeAttribute('class', 'css-progressbar bar');
+                progressbar.removeAttribute('style', 'width : 50%');
+            }
+
+            console.log(progressbar);
+            
+
+        });
+
+        var a = document.getElementById('progressbar');
+        var b = a.offsetWidth;
+
+    </script>
+    
+</body>
+</html>
